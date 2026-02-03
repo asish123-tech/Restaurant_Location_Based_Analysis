@@ -46,3 +46,26 @@ plt.savefig("output/average_rating_by_city.png")
 plt.show()
 print("Average Rating by City plot saved as 'output/average_rating_by_city.png'")
 
+# -----------------------------
+# Price Range Distribution in Top City
+# -----------------------------
+
+top_city = df["City"].value_counts().idxmax()
+
+price_distribution = (
+    df[df["City"] == top_city]["Price range"]
+    .value_counts()
+    .sort_index()
+)
+
+plt.figure()
+price_distribution.plot(kind="bar")
+plt.title(f"Price Range Distribution in {top_city}")
+plt.xlabel("Price Range")
+plt.ylabel("Number of Restaurants")
+plt.tight_layout()
+
+plt.savefig("output/price_range_distribution.png")
+plt.show()
+print("Price Range Distribution plot saved as 'output/price_range_distribution.png'")
+
