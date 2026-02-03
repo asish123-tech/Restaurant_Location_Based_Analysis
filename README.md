@@ -1,4 +1,4 @@
-📍 Task 4: Location-Based Restaurant Analysis
+📍Location-Based Restaurant Analysis
 📌 Overview
 
 This task focuses on analyzing restaurant data based on geographical location to identify trends in restaurant distribution, customer ratings, and pricing patterns using Python.
